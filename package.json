@@ -1,0 +1,39 @@
+{
+  "name": "koats",
+  "version": "0.0.1",
+  "description": "An experimental pure typescript implementation of Koa",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@types/node": "^10.12.12",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "source-map-support": "^0.5.9",
+    "tslint": "^5.11.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist test",
+    "build": "tsc -P tsconfig.json --outDir dist",
+    "pretest": "tsc -P tsconfig.test.json --outDir test",
+    "test": "mocha -r source-map-support/register \"test/**/*.spec.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camronlent/koats.git"
+  },
+  "keywords": [
+    "Koa",
+    "Server"
+  ],
+  "author": "Camron Lent",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/camronlent/koats/issues"
+  },
+  "homepage": "https://github.com/camronlent/koats#readme"
+}
